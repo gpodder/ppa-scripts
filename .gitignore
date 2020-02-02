@@ -4,3 +4,12 @@ gpodder-git
 *.pyc
 .osc
 VENV
+*.changes
+*.tar.gz
+*.tar.xz
+*.dsc
+*.upload
+*.deb
+*.build
+*.buildinfo
+*.diff.gz
