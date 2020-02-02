@@ -93,15 +93,12 @@ for release, debian_dir in releases.items():
 
 p("rm -R debian")
 
-p("echo debsign -k '9FCE 0930 7C7D A5B0 6E3C AC79 409C B5A2 2813 3CC6' %s*.changes" % (PACKAGE,))
+print("RUN ON YOUR HOST debsign -k '9FCE 0930 7C7D A5B0 6E3C AC79 409C B5A2 2813 3CC6' %s*.changes" % (PACKAGE,))
 dput = "dput --config '%s'" % dput_cfg
 if args.dist == "debian":
     fail(p("%s local %s*.changes" % (dput, PACKAGE)))
 else:
     if args.release:
-        fail(p("echo %s stable %s*.changes" % (dput, PACKAGE)))
+        print("RUN IN CONTAINER %s stable %s*.changes" % (dput, PACKAGE))
     else:
-        fail(p("echo %s unstable %s*.changes" % (dput, PACKAGE)))
-    # fail(p("%s experimental %s*.changes" % (dput, PACKAGE)))
-
-# clean(start_dir, PACKAGE)
+        print("RUN IN CONTAINER %s unstable %s*.changes" % (dput, PACKAGE))
