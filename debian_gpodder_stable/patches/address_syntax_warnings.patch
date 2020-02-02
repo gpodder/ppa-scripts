@@ -1,0 +1,26 @@
+Description: Address SyntaxWarnings
+Origin: vendor
+Author: tony mancill <tmancill@debian.org>
+
+--- a/src/gpodder/gtkui/model.py
++++ b/src/gpodder/gtkui/model.py
+@@ -845,7 +845,7 @@
+                     if isinstance(c, GPodcast) and c.section == section]
+ 
+             # Calculate the stats over all podcasts of this section
+-            if len(channels) is 0:
++            if len(channels) == 0:
+                 total = deleted = new = downloaded = unplayed = 0
+             else:
+                 total, deleted, new, downloaded, unplayed = list(map(sum,
+--- a/src/gpodder/util.py
++++ b/src/gpodder/util.py
+@@ -1644,7 +1644,7 @@
+     if len(l1) > 0:
+         p = [('..' + os.sep) * len(l1)]
+     p = p + l2
+-    if len(p) is 0:
++    if len(p) == 0:
+         return "."
+ 
+     return os.path.join(*p)

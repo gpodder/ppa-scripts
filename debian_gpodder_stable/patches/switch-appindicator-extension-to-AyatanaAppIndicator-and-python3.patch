@@ -1,0 +1,11 @@
+--- a/share/gpodder/extensions/ubuntu_appindicator.py
++++ b/share/gpodder/extensions/ubuntu_appindicator.py
+@@ -12,7 +12,7 @@
+ 
+ _ = gpodder.gettext
+ 
+-__title__ = _('Ubuntu App Indicator')
++__title__ = _('Ayatana App Indicator')
+ __description__ = _('Show a status indicator in the top bar.')
+ __authors__ = 'Thomas Perl <thp@gpodder.org>'
+ __category__ = 'desktop-integration'

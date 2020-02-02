@@ -1,0 +1,20 @@
+[unstable]
+fqdn = ppa.launchpad.net
+method = ftp
+incoming = ~gpodder/ubuntu/dumpingplace/
+login = anonymous
+allow_unsigned_uploads = 0
+
+[stable]
+fqdn = ppa.launchpad.net
+method = ftp
+incoming = ~gpodder/ubuntu/ppa/
+login = anonymous
+allow_unsigned_uploads = 0
+
+[experimental]
+fqdn = ppa.launchpad.net
+method = ftp
+incoming = ~gpodder/ubuntu/expedition/
+login = anonymous
+allow_unsigned_uploads = 0

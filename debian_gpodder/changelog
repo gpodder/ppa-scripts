@@ -1,0 +1,5 @@
+gpodder (%version%) %dist%; urgency=medium
+
+  * unofficial/untested trunk build
+
+ -- Eric Le Lay <contact@elelay.fr>  %date%

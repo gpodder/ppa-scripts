@@ -1,0 +1,4 @@
+gpodder: executable-not-elf-or-script usr/share/gpodder/extensions/mpris-listener.py
+gpodder: executable-not-elf-or-script usr/share/gpodder/extensions/notification-win32.py
+gpodder: executable-not-elf-or-script usr/share/gpodder/extensions/taskbar_progress.py
+gpodder: executable-not-elf-or-script usr/share/gpodder/ui/gtk/gpodderpreferences.ui
