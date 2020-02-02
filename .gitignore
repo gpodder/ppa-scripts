@@ -3,3 +3,4 @@
 gpodder-git
 *.pyc
 .osc
+VENV
