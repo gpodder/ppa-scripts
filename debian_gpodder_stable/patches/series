@@ -2,4 +2,3 @@ disable_update_check_on_startup_default.patch
 utf-8_coding_for_setup.patch
 remove_copyright_character.patch
 switch-appindicator-extension-to-AyatanaAppIndicator-and-python3.patch
-address_syntax_warnings.patch
