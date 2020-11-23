@@ -64,8 +64,8 @@ if args.dist == "debian":
 else:
     releases = {
         "bionic": debian_dir,
-        "disco": debian_dir,
-        "eoan": debian_dir,
+        "focal": debian_dir,
+        "groovy": debian_dir,
     }
 
 for release, debian_dir in releases.items():
