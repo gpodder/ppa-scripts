@@ -1,16 +1,11 @@
-Description: Replace the copyright character with equivalent string
-Forwarded: not-needed
-Origin: vendor
-Author: tony mancill <tmancill@debian.org>
-
---- a/src/gpodder/__init__.py
-+++ b/src/gpodder/__init__.py
+--- a/src/gpodder/__init__.py	2021-06-14 21:32:37.488090354 +0200
++++ b/src/gpodder/__init__.py	2021-06-14 21:32:56.501024215 +0200
 @@ -22,7 +22,7 @@
  __author__ = 'Thomas Perl <thp@gpodder.org>'
- __version__ = '3.10.17'
- __date__ = '2020-11-23'
--__copyright__ = '© 2005-2020 The gPodder Team'
-+__copyright__ = '(c) 2005-2020 The gPodder Team'
+ __version__ = '3.10.20'
+ __date__ = '2021-06-06'
+-__copyright__ = '© 2005-2021 The gPodder Team'
++__copyright__ = '(c) 2005-2021 The gPodder Team'
  __license__ = 'GNU General Public License, version 3 or later'
  __url__ = 'http://gpodder.org/'
  
