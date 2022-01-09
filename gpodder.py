@@ -65,8 +65,8 @@ else:
     releases = {
         "bionic": debian_dir,
         "focal": debian_dir,
-        "groovy": debian_dir,
         "hirsute": debian_dir,
+        "impish": debian_dir,
     }
 
 for release, debian_dir in releases.items():
