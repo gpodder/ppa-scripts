@@ -65,7 +65,6 @@ else:
     releases = {
         "bionic": debian_dir,
         "focal": debian_dir,
-        "impish": debian_dir,
         "jammy": debian_dir,
     }
 
