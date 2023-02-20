@@ -1,3 +1,2 @@
 disable_update_check_on_startup_default.patch
 switch-appindicator-extension-to-AyatanaAppIndicator-and-python3.patch
-0001-Fix-crash-on-older-versions-of-python.patch
