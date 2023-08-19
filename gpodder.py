@@ -65,7 +65,8 @@ else:
     releases = {
         "bionic": debian_dir,
         "focal": debian_dir,
-        "kinetic": debian_dir,
+        "jammy": debian_dir,
+        "lunar": debian_dir,
     }
 
 for release, debian_dir in releases.items():
