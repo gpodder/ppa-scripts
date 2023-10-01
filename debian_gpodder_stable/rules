@@ -30,4 +30,4 @@ override_dh_install:
 	dh_installdirs
 	make messages
 	PREFIX=$(PREFIX) make share/dbus-1/services/org.gpodder.service
-	${SETUP} install --no-compile --root='$(DESTDIR)' --prefix=$(PREFIX)
+	GPODDER_INSTALL_UIS="cli gtk" ${SETUP} install --no-compile --root='$(DESTDIR)' --prefix=$(PREFIX) --install-layout=deb
