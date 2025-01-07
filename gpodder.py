@@ -6,8 +6,8 @@ from _util import *
 ##########################################################
 
 PACKAGE= "gpodder"
-PPA_VERSION = "3.11.3.101"
-RELEASE_VERSION = "3.11.3"
+PPA_VERSION = "3.11.5.99"
+RELEASE_VERSION = "3.11.5"
 
 ##########################################################
 
@@ -66,7 +66,8 @@ else:
         "bionic": debian_dir,
         "focal": debian_dir,
         "jammy": debian_dir,
-        "lunar": debian_dir,
+        "noble": debian_dir,
+        "oracular": debian_dir,
     }
 
 for release, debian_dir in releases.items():
