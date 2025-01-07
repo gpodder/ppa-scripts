@@ -2,7 +2,7 @@ gPodder PPA Scripts
 ======================
 
 * Adapted from https://github.com/quodlibet/ppa-scripts
-* Only works for Ubuntu 18.04 and up.
+* Only works for Ubuntu 24.04 and up.
 * No debian or rpm repos
 
 
@@ -15,11 +15,11 @@ Edit `gpodder.py` for newer **PPA_VERSION** and **RELEASE_VERSION**.
 
 Create the docker image with devscripts:
 
-	# docker build -t ubuntu:18.04-devscripts .
+	# docker build -t ubuntu:24.04-devscripts .
 
 Run an interactive shell in a new container from this image:
 
-	# docker run --rm -it --name ppa -v $(pwd):/root/gpodder-ppa-scripts ubuntu:18.04-devscripts
+	# docker run --rm -it --name ppa -v $(pwd):/root/gpodder-ppa-scripts ubuntu:24.04-devscripts
 
 
 Import your gpg keys in the container
