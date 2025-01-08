@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 
 import os
+import sys
+
+import _util
 from _util import *
 
 ##########################################################
@@ -12,6 +15,9 @@ RELEASE_VERSION = "3.11.5"
 ##########################################################
 
 args = parse_args()
+
+if args.verbose:
+    _util.VERBOSE = True
 
 if args.dist == "ubuntu":
     dput_cfg = os.path.join(os.getcwd(), "dput.cf")
@@ -91,6 +97,10 @@ for release, debian_dir in releases.items():
         else:
             fail(p("dpkg-buildpackage -uc -us -tc -I -rfakeroot"))
     else:
+        if args.try_build:
+            fail(p("dpkg-buildpackage -uc -us -tc -I -rfakeroot"))
+            print("Binary build succeeded")
+            sys.exit(0)
         fail(p("dpkg-buildpackage -uc -us -S -tc -I -rfakeroot"))
 
 p("rm -Rf debian")

@@ -5,8 +5,16 @@ import subprocess
 import sys
 import os
 
+VERBOSE = False
+
 def parse_args():
     parser = OptionParser()
+    parser.add_option("--verbose", dest="verbose", action="store_true",
+                      default=False, help="run in verbose mode")
+
+    parser.add_option("--try-build", dest="try_build", action="store_true",
+                      default=False, help="try building the binary package")
+
     parser.add_option("-r", "--release", dest="release", action="store_true",
                       default=False, help="stable release")
 
@@ -47,10 +55,11 @@ def failed(out):
 
 def fail(out):
     status, stdout, stderr = out
-    if status != 0:
+    if VERBOSE or status != 0:
         print("#" * 24)
         print(stdout)
         print(stderr)
         print("#" * 24)
+    if status != 0:
         sys.exit()
     return out

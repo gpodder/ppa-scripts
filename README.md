@@ -29,7 +29,9 @@ Import your gpg keys in the container
 Inside, run `gpodder.py` to build `*.changes` files for unstable build and `gpodder.py --release` for stable build:
 
 	# cd /root/gpodder-ppa-scripts/
+	# ./gpodder.py --try-build  # try building the snapshot release
 	# ./gpodder.py  # snapshot release
+	# ./gpodder.py -r --try-build  # try building the release
 	# ./gpodder.py -r # stable release
 
 Take note of last two lines:
