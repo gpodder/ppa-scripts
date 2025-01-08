@@ -1,5 +1,7 @@
 #!/usr/bin/make -f
 
+export DH_VERBOSE = 1
+
 PACKAGE   = $(firstword $(shell dh_listpackages))
 TMP       = $(CURDIR)/debian/$(PACKAGE)
 CHANGELOG = ChangeLog
@@ -22,12 +24,3 @@ override_dh_clean:
 	rm -rf build dist
 	dh_clean
 	make clean
-
-override_dh_install:
-	dh_testdir
-	dh_testroot
-	dh_prep
-	dh_installdirs
-	make messages
-	PREFIX=$(PREFIX) make share/dbus-1/services/org.gpodder.service
-	GPODDER_INSTALL_UIS="cli gtk" ${SETUP} install --no-compile --root='$(DESTDIR)' --prefix=$(PREFIX) --install-layout=deb

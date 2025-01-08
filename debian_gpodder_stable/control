@@ -9,7 +9,9 @@ Build-Depends: debhelper (>= 10),
  intltool,
  python3,
  python3-all,
- python3-setuptools
+ python3-setuptools,
+ python3-build,
+ python3-installer (>=0.6)
 Homepage: https://gpodder.org/
 Vcs-Browser: https://salsa.debian.org/debian/gpodder
 Vcs-Git: https://salsa.debian.org/debian/gpodder.git
