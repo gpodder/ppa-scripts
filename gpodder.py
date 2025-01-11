@@ -48,11 +48,14 @@ date = p("date -R")[1]
 
 if not args.release:
    fail(p("echo 'BUILD_INFO = u\"%s\"' >> 'src/gpodder/build_info.py'" % rev_hash))
-   fail(p("sed -i 's/$(PYTHON) -m installer/DEB_PYTHON_INSTALL_LAYOUT=deb $(PYTHON) -m installer/' makefile"))
-   # Not enough to build on jammy: python3-installer is also too old
-   #fail(p("sed -i 's/setuptools>=64/setuptools>=59/' pyproject.toml"))
-   # Uncomment to stop after installer has run
-   #fail(p("sed -i '/-m installer/a \\\\tfalse' makefile"))
+elif args.version:
+   fail(p("echo 'BUILD_INFO = u\"%s\"' >> 'src/gpodder/build_info.py'" % args.version))
+
+fail(p("sed -i 's/$(PYTHON) -m installer/DEB_PYTHON_INSTALL_LAYOUT=deb $(PYTHON) -m installer/' makefile"))
+# Not enough to build on jammy: python3-installer is also too old
+#fail(p("sed -i 's/setuptools>=64/setuptools>=59/' pyproject.toml"))
+# Uncomment to stop after installer has run
+#fail(p("sed -i '/-m installer/a \\\\tfalse' makefile"))
 
 if not args.release:
     UPSTREAM_VERSION = PPA_VERSION + "+" + rev_num + "~" + rev_hash
