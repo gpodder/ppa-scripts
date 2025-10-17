@@ -40,6 +40,20 @@ Take note of last two lines:
 
 Wait about 1/2 hour for builds to finish (mail notification / status on the ppa page).
 
+## Building for newer ubuntu releases
+
+When a newer ubunut release is out, we need to upload a new version, even if no new gPodder
+version is out.
+
+[Copying packages](https://documentation.ubuntu.com/launchpad/user/reference/packaging/ppas/copying-packages/#copying-packages) doesn't work.
+
+
+1. check https://launchpad.net/~gpodder/+archive/ubuntu/ppa/+packages for the latest `+X` version.
+   Eg to rebuild for questing I had to use the `-v 5` flag, resulting in version  `3.11.5+5-0~ppa5~questing`
+   of the package.
+
+2. increment the version: `./gpodder.py -r -v 6`
+
 # Links
 https://help.launchpad.net/Packaging/PPA/BuildingASourcePackage
 https://help.launchpad.net/Packaging/PPA/Uploading
