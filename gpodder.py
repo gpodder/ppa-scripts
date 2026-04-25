@@ -78,8 +78,8 @@ if args.dist == "debian":
 else:
     releases = {
         "noble": debian_dir,
-        "plucky": debian_dir,
         "questing": debian_dir,
+        "resolute": debian_dir,
     }
 
 for release, debian_dir in releases.items():
